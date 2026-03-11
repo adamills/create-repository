@@ -1,25 +1,13 @@
-# create-repository
+# CustomToast Utility
 
-Easily set up a new github repository. Reads the name/description from the package.json file if it's present. Sets origin upstream if it's not already set.
+A lightweight helper class for Android developers to show **colored Toasts with icons** in one line of code.
 
-```
-npm install create-repository -g
-```
+## Features
+- 🎨 Custom background colors
+- 🖼️ Add icons easily
+- ⚡ Plug-and-play, no dependencies
 
 ## Usage
-
-`create-repository` will try to read `package.json` and use the name and description properties.
-
-```
-$ create-repository
-```
-
-You can also pass values for name and description.
-
-```
-$ create-repository --name my-new-project --description "That's all I have to say about that"
-```
-
-## License
-
-MIT
+```java
+CustomToast.show(this, "Success!", Color.GREEN, R.drawable.ic_check);
+CustomToast.show(this, "Error!", Color.RED, R.drawable.ic_error);
