@@ -1,20 +1,27 @@
-{
-  "name": "create-repository",
-  "version": "1.3.0",
-  "description": "Easily set up a new github repository. Reads the name/description from the package.json file if it's present. Sets origin upstream if it's not already set.",
-  "dependencies": {
-    "ghauth": "^2.0.0",
-    "github": "^0.2.3",
-    "minimist": "^1.1.0"
-  },
-  "devDependencies": {},
-  "bin": {
-    "create-repository": "index.js"
-  },
-  "author": "Tobias Baunbæk <freeall@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/freeall/create-repository.git"
-  }
+package com.ousaf.example;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.graphics.Color;
+import android.widget.Button;
+import com.ousaf.customtoast.CustomToast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnSuccess = findViewById(R.id.btnSuccess);
+        Button btnError = findViewById(R.id.btnError);
+
+        btnSuccess.setOnClickListener(v ->
+            CustomToast.show(this, "Login Successful!", Color.GREEN, R.drawable.ic_check)
+        );
+
+        btnError.setOnClickListener(v ->
+            CustomToast.show(this, "Something went wrong!", Color.RED, R.drawable.ic_error)
+        );
+    }
 }
