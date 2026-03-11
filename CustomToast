@@ -1,0 +1,4 @@
+example-app/
+ ├── app/src/main/java/com/ousaf/example/MainActivity.java
+ ├── app/src/main/res/layout/activity_main.xml
+ └── app/src/main/res/drawable/ic_check.png
